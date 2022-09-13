@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -53,25 +54,10 @@ public class Main {
 		map.put(2,new Student(5, "Hoa", 8, 8));
 
 		//Sắp xếp theo Key
-		System.out.println("----------");
-		TreeMap<Integer, Student> sorted = new TreeMap<Integer, Student>(map);
-		Set<Map.Entry<Integer, Student>> mappings = sorted.entrySet();
-		for (Map.Entry<Integer, Student> mapping: mappings) {
-			System.out.println(mapping.getKey() + "---->" + mapping.getValue());
-		}
 		
 		
-//		System.out.println("--------");
-//		map2.forEach((k,v)->System.out.println(k+"\t"+v));
-//		System.out.println("_______________");
-//		Set<Entry<Class, Student>> entrySet = map2.entrySet();
-//		List<Entry<Class, Student>> list = new ArrayList<>(entrySet);
-//		Collections.sort(list, new Comparator<Entry<Class, Student>>() {
-//			@Override
-//			public int compare(Entry<Class, Student> o1, Entry<Class, Student> o2) {
-//				return o1.getValue().compareTo(o2.getValue());
-//			}
-//		});
+		
+
 		  List<Student> lists = new ArrayList<Student>();
 	        lists.add(std);
 	        lists.add(std1);
@@ -94,7 +80,31 @@ public class Main {
 	        for(Student stdd : lists){
 	            System.out.println(stdd.toString());
 	        }
-	    }
+	        System.out.println("==============");
+//	        Set<Student> setStudent = new HashSet<>();
+//	        setStudent.add(std4);
+//	        setStudent.add(std3);
+//	        setStudent.add(std2);
+//	        setStudent.add(std1);
+//	        setStudent.add(std);
+//	        for (Student s: setStudent) {
+//				System.out.println(s);			
+//			}
+	        System.out.println("----------");
+			
+			List<ClassStudent> listClStd = new ArrayList<>();
+			listClStd.add(null);
+			
+			Map<Class, Student> mapClassStudent = new HashMap<Class, Student>(); 
+			mapClassStudent.put(c5, std4);
+			mapClassStudent.put(c4, std3);
+			mapClassStudent.put(c3, std2);
+			mapClassStudent.put(c2, std);
+			System.out.println(mapClassStudent);
+			
+			    
+
+	}
 	
 	}
 	
