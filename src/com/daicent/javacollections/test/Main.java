@@ -80,6 +80,10 @@ public class Main {
 	        for(Student stdd : lists){
 	            System.out.println(stdd.toString());
 	        }
+	        System.out.println("diem cao nhat lớp: ");
+	        
+	            System.out.println(lists.get(0));
+	        
 	        System.out.println("==============");
 //	        Set<Student> setStudent = new HashSet<>();
 //	        setStudent.add(std4);
@@ -100,6 +104,7 @@ public class Main {
 			mapClassStudent.put(c4, std3);
 			mapClassStudent.put(c3, std2);
 			mapClassStudent.put(c2, std);
+			
 			System.out.println(mapClassStudent);
 			
 			    
