@@ -33,6 +33,18 @@ public class Main {
 		Student std3 = new Student(4, "Trang", 9, 9);
 		Student std4 = new Student(5, "Hoa", 8, 8);
 		
+		Student std5 = new Student(1, "Son", 7, 4);
+		Student std6 = new Student(2, "Hieu", 6, 7);
+		Student std7 = new Student(3, "Phuc", 8, 8);
+		Student std8 = new Student(4, "Trang", 9, 3);
+		Student std9 = new Student(5, "Hoa", 8, 1);
+		
+		Student std10 = new Student(1, "Son", 7, 5);
+		Student std11 = new Student(2, "Hieu", 6, 7);
+		Student std12 = new Student(3, "Phuc", 8, 9);
+		Student std13 = new Student(4, "Trang", 9, 10);
+		Student std14 = new Student(5, "Hoa", 8, 8);
+		
 		Class cl = new Class(1, "1");
 		Class c2 = new Class(2, "2");
 		Class c3 = new Class(3, "3");
@@ -94,6 +106,29 @@ public class Main {
 //	        for (Student s: setStudent) {
 //				System.out.println(s);			
 //			}
+
+			  List<Student> list2 = new ArrayList<Student>();
+		        lists.add(std5);
+		        lists.add(std6);
+		        lists.add(std7);
+		        lists.add(std8);
+		        lists.add(std9);
+
+
+				  List<Student> list3 = new ArrayList<Student>();
+			        lists.add(std10);
+			        lists.add(std11);
+			        lists.add(std12);
+			        lists.add(std14);
+			        lists.add(std13);
+			        
+			    List<Student> listAll = new ArrayList<>();
+			    listAll.add((Student) lists);
+			    listAll.add((Student) list2);
+			    listAll.add((Student) list3);
+			    System.out.println("Các lớp: " + listAll);
+			    
+			    
 	        System.out.println("----------");
 			
 			List<ClassStudent> listClStd = new ArrayList<>();
