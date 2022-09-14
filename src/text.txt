@@ -1,0 +1,23 @@
+This is a little text file for all of the novices out there like myself
+who have wandered in on the world of computing eager for knowledge but
+who have found very little. This is a table of the ASCII codes.
+"What? you ask? The ASCII codes? Why that's easy. 32 is space, and 33 is
+the exclamation point, and 34 is the double quote..." All true, except that
+the code starts at 0. Well, I imagine that all of you have heard of "NUL"s
+or null characters, and probably "NAK"s (which are used in Xmodem Checksum
+protocol) but what are the other mysterious codes between 0 and 32?     
+ 
+  Well, friends, this is your opportunity to find out. Because I am going to
+tell you. Now don't get the idea that I have been in the computer business
+since 1956 and was on the committee that invented the ASCII codes. I wasn't
+born till 15 years after that and I got interested in computers two years ago.
+I simply stumbled on this very interesting table in the VisiFile manual
+(a very bad program marketed by the late lamented VisiCorp that came with my
+computer) that not only included the number and two- or three-letter
+mnemonic (a fancy "computerish" word for name) but what the codes were
+actually intended to do! (Yes, it sounds too good to be true.) So I decided
+to gift you all with this table.
+
+  Oh, if you think this is stealing their manual material, for one thing
+the ASCII codes are far from copyrighted. And VisiCorp is but a small part of
+data in the computer-industry's (read-only?) memory.
