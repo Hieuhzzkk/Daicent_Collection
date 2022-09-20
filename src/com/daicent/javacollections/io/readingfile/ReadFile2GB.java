@@ -1,43 +1,33 @@
 package com.daicent.javacollections.io.readingfile;
 
+import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.lang.reflect.Field;
+import java.nio.file.Files;
 import java.util.Scanner;
-
-public class ReadingFiles {
+import java.util.stream.Stream;
 	
-	public static void main(String[] args) {
-		FileInputStream fileInputStream = null;
-		FileOutputStream fileOutputStream = null;
+public class ReadFile2GB {
+	public static void main(String [] args) throws IOException {
 		try {
-			fileInputStream = new FileInputStream("src/text.txt");
-			//fileOutputStream = new FileOutputStream("src/text_cp.txt");
 
-			int ch;
-			while ((ch = fileInputStream.read()) != -1) {
-				System.out.print((char) ch);
-				fileOutputStream.write(ch);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			if (fileInputStream != null) {
-				try {
-					fileInputStream.close();
-				} catch (Exception e2) {
-					e2.printStackTrace();
-				}
-			}
-			if (fileOutputStream != null) {
-				try {
-					fileOutputStream.close();
-				} catch (Exception e2) {
-					e2.printStackTrace();
-				}
-			}
-		}
-		System.out.println("\n");
+            File f = new File("src/text.txt");
+
+            BufferedReader b = new BufferedReader(new FileReader(f));
+
+            String readLine = "";
+
+            System.out.println("Reading file using Buffered Reader");
+
+            while ((readLine = b.readLine()) != null) {
+                System.out.println(readLine);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 		int numLines = 0;
 		int numWord = 0;
 		int numChars = 0;
@@ -77,6 +67,5 @@ public class ReadingFiles {
 		System.out.println("Number of Words: " + numWord);
 		System.out.println("Number of Lines: " + numLines);
 		System.out.println("Number of Characters: " + numChars);
-
-	}
+}
 }
