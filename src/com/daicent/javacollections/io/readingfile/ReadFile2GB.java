@@ -1,11 +1,14 @@
 package com.daicent.javacollections.io.readingfile;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.nio.file.Files;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.stream.Stream;
 	
@@ -16,7 +19,7 @@ public class ReadFile2GB {
             File f = new File("src/text.txt");
 
             BufferedReader b = new BufferedReader(new FileReader(f));
-
+        
             String readLine = "";
 
             System.out.println("Reading file using Buffered Reader");
@@ -28,6 +31,8 @@ public class ReadFile2GB {
         } catch (IOException e) {
             e.printStackTrace();
         }
+		
+		
 		int numLines = 0;
 		int numWord = 0;
 		int numChars = 0;
@@ -68,4 +73,5 @@ public class ReadFile2GB {
 		System.out.println("Number of Lines: " + numLines);
 		System.out.println("Number of Characters: " + numChars);
 }
+	
 }

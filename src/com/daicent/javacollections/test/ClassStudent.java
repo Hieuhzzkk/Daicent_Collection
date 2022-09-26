@@ -1,41 +1,41 @@
 package com.daicent.javacollections.test;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.TreeMap;
 
-public class ClassStudent implements Comparable<ClassStudent>{
-	private Student student;
-	private TreeMap<Class, Student> mapClassStudent = new TreeMap<>(); 
-	
-	
-
-	public ClassStudent(Student student, TreeMap<Class, Student> mapClassStudent) {
+public class ClassStudent {
+	private Integer idStudent;
+	private String name;
+	private List<Classzz> listClaszz;
+	public ClassStudent(Integer idStudent, String name, List<Classzz> listClaszz) {
 		super();
-		this.student = student;
-		this.mapClassStudent = mapClassStudent;
+		this.idStudent = idStudent;
+		this.name = name;
+		this.listClaszz = listClaszz;
 	}
-
-	public Student getStudent() {
-		return student;
+	public Integer getIdStudent() {
+		return idStudent;
 	}
-
-	public void setStudent(Student student) {
-		this.student = student;
+	public void setIdStudent(Integer idStudent) {
+		this.idStudent = idStudent;
 	}
-
-	public TreeMap<Class, Student> getMapClassStudent() {
-		return mapClassStudent;
+	public String getName() {
+		return name;
 	}
-
-	public void setMapClassStudent(TreeMap<Class, Student> mapClassStudent) {
-		this.mapClassStudent = mapClassStudent;
+	public void setName(String name) {
+		this.name = name;
 	}
-	
+	public List<Classzz> getListClaszz() {
+		return listClaszz;
+	}
+	public void setListClaszz(List<Classzz> listClaszz) {
+		this.listClaszz = listClaszz;
+	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(mapClassStudent, student);
+		return Objects.hash(idStudent, listClaszz, name);
 	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -45,12 +45,13 @@ public class ClassStudent implements Comparable<ClassStudent>{
 		if (getClass() != obj.getClass())
 			return false;
 		ClassStudent other = (ClassStudent) obj;
-		return Objects.equals(mapClassStudent, other.mapClassStudent) && Objects.equals(student, other.student);
+		return Objects.equals(idStudent, other.idStudent) && Objects.equals(listClaszz, other.listClaszz)
+				&& Objects.equals(name, other.name);
 	}
 	@Override
-	public int compareTo(ClassStudent o) {
-		
-		return 0;
+	public String toString() {
+		return "ClassStudent [idStudent=" + idStudent + ", name=" + name + ", listClaszz=" + listClaszz + "]";
 	}
+	
 	
 }

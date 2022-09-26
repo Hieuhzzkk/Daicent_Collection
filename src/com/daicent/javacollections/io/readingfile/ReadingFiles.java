@@ -17,7 +17,7 @@ public class ReadingFiles {
 			int ch;
 			while ((ch = fileInputStream.read()) != -1) {
 				System.out.print((char) ch);
-				fileOutputStream.write(ch);
+				//fileOutputStream.write(ch);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
